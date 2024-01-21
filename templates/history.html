@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>summary</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+
+    <div id="vueapp" class="section-history">
+        <div class="card-history">
+            <div class="card-history-head">
+                <button @click="history" class="btn">get history</button>
+            </div>
+            <ul>
+                <li v-for="i in historydata[0]">
+                    <div>
+
+                        <h4> Before </h4>
+                        {{i.before}}
+
+                        <h4>After</h4>
+                        {{i.after}}
+
+                        <h4>Analysis text</h4>
+                        {{i.analysistext}}
+
+                        <h4>blue score</h4>
+
+                        {{i.blueScore}}
+                        <hr>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- partial -->
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <script src="../src/index.js"></script>
+
+</body>
+
+</html>
